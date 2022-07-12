@@ -1,11 +1,20 @@
 #pragma once
-#include <iostream>
-#ifdef MATHLIBRARY_EXPORTS
-#define MATHLIBRARY_API __declspec(dllexport)
-#else
-#define MATHLIBRARY_API __declspec(dllimport)
-
-#endif
+#ifndef GAUSSIAN_H
+#define GAUSSIAN_H
+#ifndef EXPORT_FUNC
+#define EXPORT_FUNC  _declspec(dllexport)
+#endif // !EXPORT_FUNC
 
 
-extern "C" MATHLIBRARY_API int hello();
+
+
+extern "C" EXPORT_FUNC int hello();
+extern "C" EXPORT_FUNC int gaussian();
+
+
+
+
+
+
+
+#endif // !GAUSSIAN_H

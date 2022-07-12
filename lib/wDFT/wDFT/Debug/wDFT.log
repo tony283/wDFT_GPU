@@ -1,0 +1,6 @@
+﻿  pch.cpp
+  dllmain.cpp
+  winDFT_gaussian.cpp
+  Generating Code...
+     Creating library C:\Users\tony1\Documents\GitHub\wDFT_GPU\lib\wDFT\Debug\wDFT.lib and object C:\Users\tony1\Documents\GitHub\wDFT_GPU\lib\wDFT\Debug\wDFT.exp
+  wDFT.vcxproj -> C:\Users\tony1\Documents\GitHub\wDFT_GPU\lib\wDFT\Debug\wDFT.dll

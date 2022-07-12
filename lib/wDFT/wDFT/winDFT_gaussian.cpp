@@ -1,8 +1,14 @@
-#include "winDFT_gaussian.h"
-#include <iostream>
 #include "pch.h"
+#include "winDFT_Gaussian.h"
+
+
+int gaussian() {
+    return 1;
+}
+
+
 
 
 int hello() {
-	return 2;
+    return 2;
 }
