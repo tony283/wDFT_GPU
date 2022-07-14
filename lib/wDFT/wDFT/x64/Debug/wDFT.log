@@ -2,5 +2,4 @@
   dllmain.cpp
   winDFT_Gaussian.cpp
   Generating Code...
-     Creating library C:\Users\tony1\Documents\GitHub\wDFT_GPU\lib\wDFT\x64\Debug\wDFT.lib and object C:\Users\tony1\Documents\GitHub\wDFT_GPU\lib\wDFT\x64\Debug\wDFT.exp
   wDFT.vcxproj -> C:\Users\tony1\Documents\GitHub\wDFT_GPU\lib\wDFT\x64\Debug\wDFT.dll

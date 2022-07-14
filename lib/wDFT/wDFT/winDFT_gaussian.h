@@ -6,8 +6,8 @@
 #endif // !EXPORT_FUNC
 
 
-#pragma region MyRegion
-
+#pragma region GAUSSIAN
+extern "C" EXPORT_FUNC double Sab(double a, double b, double rab);
 #pragma endregion
 
 
