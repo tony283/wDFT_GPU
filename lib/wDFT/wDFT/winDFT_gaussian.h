@@ -6,6 +6,9 @@
 #endif // !EXPORT_FUNC
 
 
+#pragma region MyRegion
+
+#pragma endregion
 
 
 extern "C" EXPORT_FUNC int hello();
