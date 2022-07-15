@@ -7,12 +7,16 @@
 
 
 #pragma region GAUSSIAN
-extern "C" EXPORT_FUNC double Sab(double a, double b, double rab);
+extern "C" EXPORT_FUNC double* Sab(double* a, int* l, int* xyz, int m);
+double S_ss(double a, double b, double rab);
+double S_sp(double a, double b, double rab, double rab_D);
+double S_pxpx(double a, double b, double rab, double rab_D);
+double S_pxpy(double a, double b, double rab, double rab_D1, double rab_D2);
+
 #pragma endregion
 
 
-extern "C" EXPORT_FUNC int hello();
-extern "C" EXPORT_FUNC int gaussian();
+
 
 
 
