@@ -4,7 +4,7 @@ from numpy.ctypeslib import ndpointer
 
 def ReadFile(_Settings:dict):
     
-    _Settings['basis'] = 'aaa'
+    _Settings['basis'] = 'STO-3G'
     return 0
 
 def SearchBasis(_Settings:dict):

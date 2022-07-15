@@ -2,8 +2,12 @@
 #include "winDFT_Gaussian.h"
 #include <cmath>
 #include <iostream>
+#include <vector>
+
 #pragma warning(disable:6386)
 using namespace std;
+
+
 #pragma region Assist tools
 double Rab(double* Ra, double* Rb) {
     double dx = Ra[0] - Rb[0];
@@ -25,14 +29,12 @@ void PR(int* a, int m) {
 
 
 
+
 #pragma region Gaussian Overlap Matrix
 
-double* Sab(double* a,  int* l, int* xyz, int m) {
-    PR(a, m);
-    PR(l, m);
-    PR(xyz, m);
-    cout << m << endl;
+double* Sab(double* a,  double* pos, int* l, int* xyz, int m) {
     double rab;
+    
     int num = m * m;
     double* Sab_Matrix = new double[num];
     for (int i = 0; i < m; i++) {
