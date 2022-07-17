@@ -32,7 +32,7 @@ void PR(int* a, int m) {
 
 #pragma region Gaussian Overlap Matrix
 
-double* Sab(double* a,  double* pos, int* l, int* xyz, int m) {
+double* Sab(double* a, int* l, int* xyz, int m) {
     double rab;
     
     int num = m * m;

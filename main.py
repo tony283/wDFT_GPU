@@ -7,7 +7,7 @@ import cupy as cp
 import numpy as np
 import wDFT_Process_Func as wF
 import ctypes
-#import STO_NG
+import STO_NG as sto
 from numpy.ctypeslib import ndpointer
 c_func = ctypes.CDLL("lib/wDFT.dll")
 
@@ -19,12 +19,16 @@ _Settings['task'] = 'sp'
 _Settings['rotation'] = 1
 _Settings['charge'] = 0
 _Settings['coord'] = cp.array([[0,0,0],[1.4,0,0]])
-_Settings['element'] = []
+_Settings['element'] = [1,1]
 print(_Settings['coord'][1])
+## 录入原子轨道
+orbits = []
+for i in range(len(_Settings['element'])):
+    orbits.extend(sto.Generate_One_Atom_Orbits(_Settings['coord'][i],_Settings['basis'],_Settings['element'],c_func)) 
+orbit_num = len(orbits)
+## 求得重叠积分
+S_overlap = sto.Overlap_Matrix(orbit_num,orbits,c_func)
+
+print(S_overlap)
 
 
-print(_Settings)
-
-## First step: Calculate Overlap
-a = wF.CalculateOverlap(c_func, _Settings)
-print(type(a))
